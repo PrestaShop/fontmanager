@@ -1,0 +1,29 @@
+@font-face {
+    font-family: ps front;
+    src: url('CURRENT_SHOP_URL/fontLoader?t=eot');
+    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&#iefix') format('embedded-opentype'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff') format('woff'),
+    url('CURRENT_SHOP_URL/fontLoader?t=ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: ps front;
+    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=bold');
+    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=bold&#iefix') format('embedded-opentype'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=bold') format('woff'),
+    url('CURRENT_SHOP_URL/fontLoader?t=ttf&w=bold') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: ps front;
+    src: url("CURRENT_SHOP_URL/fontLoader?t=eot&w=light");
+    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=light&#iefix') format('embedded-opentype'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=light') format('woff'),
+    url('CURRENT_SHOP_URL/fontLoader?t=ttf&w=light') format('truetype');
+    font-weight: 300;
+}
+body, #page {
+    font-family: ps front, sans-serif!important;
+}
