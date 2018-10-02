@@ -19,7 +19,7 @@ class FontManager extends Module
     {
         $this->name = 'fontmanager';
         $this->tab = 'i18n_localization';
-        $this->version = '1.0.0';
+        $this->version = '1.0.1';
         $this->author = 'iPresta.ir';
         $this->need_instance = 0;
 
@@ -40,7 +40,7 @@ class FontManager extends Module
                 'fa' => 'مدیریت فونت',
             ),
             'class_name' => 'AdminFontManager',
-            'visible' => true,
+            'visible' => false,
             'parent_class_name' => 'AdminInternational',
         ),
     );
@@ -54,7 +54,7 @@ class FontManager extends Module
                 $this->name,
                 'Font manager',
                 'AdminFontManager',
-                Tab::getIdFromClassName('AdminParentLocalization')
+                -1
             );
         }
         $this->modifyCssFile();
@@ -64,6 +64,11 @@ class FontManager extends Module
             $this->registerHook('displayBackOfficeHeader') &&
             $this->registerHook('moduleRoutes') &&
             $this->registerHook('displayHeader');
+    }
+
+    public function getContent()
+    {
+        Tools::redirectAdmin($this->context->link->getAdminLink('AdminFontManager'));
     }
 
     public function modifyCssFile()
