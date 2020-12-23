@@ -34,7 +34,7 @@ class FontmanagerfontLoaderModuleFrontController extends ModuleFrontController
     public function getFile($type, $weight, $admin = 'front') //1
     {
         Tools::redirect(
-            $this->context->shop->getBaseURL() .
+            $this->context->shop->getBaseURL(true, true) .
             'modules/fontmanager/views/fonts/' .
             $admin .
             '/' .
