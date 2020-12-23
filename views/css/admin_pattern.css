@@ -1,28 +1,28 @@
 @font-face {
     font-family: ps admin;
-    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&a=1');
-    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&a=1&#iefix') format('embedded-opentype'),
-    url('CURRENT_SHOP_URL/fontLoader?t=woff&a=1') format('woff'),
-    url('CURRENT_SHOP_URL/fontLoader?t=ttf&a=1') format('truetype');
     font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+    src: url('CURRENT_SHOP_URL/fontLoader?t=woff2') format('woff2'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff') format('woff');
 }
 
 @font-face {
     font-family: ps admin;
-    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=bold&a=1');
-    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=bold&a=1&#iefix') format('embedded-opentype'),
-    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=bold&a=1') format('woff'),
-    url('CURRENT_SHOP_URL/fontLoader?t=ttf&w=bold&a=1') format('truetype');
     font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+    src: url('CURRENT_SHOP_URL/fontLoader?t=woff2&w=bold') format('woff2'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=bold') format('woff');
 }
 
 @font-face {
     font-family: ps admin;
-    src: url("CURRENT_SHOP_URL/fontLoader?t=eot&w=light&a=1");
-    src: url('CURRENT_SHOP_URL/fontLoader?t=eot&w=light&a=1&#iefix') format('embedded-opentype'),
-    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=light&a=1') format('woff'),
-    url('CURRENT_SHOP_URL/fontLoader?t=ttf&w=light&a=1') format('truetype');
     font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+    src: url('CURRENT_SHOP_URL/fontLoader?t=woff2&w=light') format('woff2'),
+    url('CURRENT_SHOP_URL/fontLoader?t=woff&w=light') format('woff');
 }
 body, #page {
     font-family: ps admin, sans-serif!important;
