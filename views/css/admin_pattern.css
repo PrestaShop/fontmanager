@@ -1,5 +1,5 @@
 @font-face {
-    font-family: ps admin;
+    font-family: ps front;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -8,7 +8,7 @@
 }
 
 @font-face {
-    font-family: ps admin;
+    font-family: ps front;
     font-weight: bold;
     font-style: normal;
     font-display: swap;
@@ -17,7 +17,7 @@
 }
 
 @font-face {
-    font-family: ps admin;
+    font-family: ps front;
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -25,5 +25,5 @@
     url('CURRENT_SHOP_URL/fontLoader?t=woff&w=light') format('woff');
 }
 body, #page {
-    font-family: ps admin, sans-serif!important;
+    font-family: ps front, sans-serif!important;
 }
