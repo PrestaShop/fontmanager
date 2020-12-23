@@ -24,42 +24,6 @@ class AdminFontManagerController extends ModuleAdminController
             $languageTabs['font' . $language['id_lang']] = '(' . $language['iso_code'] . ')';
             $languageAdminTabs['admin_font' . $language['id_lang']] = '(' . $language['iso_code'] . ')';
             $fields_lang = array(
-                'PS_FONT_FRONT_NORMAL_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Normal eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_NORMAL_EOT_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
-                'PS_FONT_FRONT_BOLD_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Bold eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_BOLD_EOT_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
-                'PS_FONT_FRONT_LIGHT_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Light eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_LIGHT_EOT_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
-                'PS_FONT_FRONT_NORMAL_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Normal ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_NORMAL_TTF_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
-                'PS_FONT_FRONT_BOLD_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Bold ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_BOLD_TTF_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
-                'PS_FONT_FRONT_LIGHT_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Light ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_FRONT_LIGHT_TTF_' . $language['id_lang'],
-                    'tab' => 'font' . $language['id_lang'],
-                ),
                 'PS_FONT_FRONT_NORMAL_WOFF_' . $language['id_lang'] => array(
                     'title' => $this->l('Normal woff format'),
                     'type' => 'file',
@@ -78,45 +42,27 @@ class AdminFontManagerController extends ModuleAdminController
                     'name' => 'PS_FONT_FRONT_LIGHT_WOFF_' . $language['id_lang'],
                     'tab' => 'font' . $language['id_lang'],
                 ),
+                'PS_FONT_FRONT_NORMAL_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Normal woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_FRONT_NORMAL_WOFF2_' . $language['id_lang'],
+                    'tab' => 'font' . $language['id_lang'],
+                ),
+                'PS_FONT_FRONT_BOLD_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Bold woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_FRONT_BOLD_WOFF2_' . $language['id_lang'],
+                    'tab' => 'font' . $language['id_lang'],
+                ),
+                'PS_FONT_FRONT_LIGHT_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Light woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_FRONT_LIGHT_WOFF2_' . $language['id_lang'],
+                    'tab' => 'font' . $language['id_lang'],
+                ),
             );
             $fields = array_merge($fields, $fields_lang);
             $fields_lang = array(
-                'PS_FONT_ADMIN_NORMAL_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Normal eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_NORMAL_EOT_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
-                'PS_FONT_ADMIN_BOLD_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Bold eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_BOLD_EOT_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
-                'PS_FONT_ADMIN_LIGHT_EOT_' . $language['id_lang'] => array(
-                    'title' => $this->l('Light eot format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_LIGHT_EOT_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
-                'PS_FONT_ADMIN_NORMAL_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Normal ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_NORMAL_TTF_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
-                'PS_FONT_ADMIN_BOLD_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Bold ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_BOLD_TTF_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
-                'PS_FONT_ADMIN_LIGHT_TTF_' . $language['id_lang'] => array(
-                    'title' => $this->l('Light ttf format'),
-                    'type' => 'file',
-                    'name' => 'PS_FONT_ADMIN_LIGHT_TTF_' . $language['id_lang'],
-                    'tab' => 'admin_font' . $language['id_lang'],
-                ),
                 'PS_FONT_ADMIN_NORMAL_WOFF_' . $language['id_lang'] => array(
                     'title' => $this->l('Normal woff format'),
                     'type' => 'file',
@@ -133,6 +79,24 @@ class AdminFontManagerController extends ModuleAdminController
                     'title' => $this->l('Light woff format'),
                     'type' => 'file',
                     'name' => 'PS_FONT_ADMIN_LIGHT_WOFF_' . $language['id_lang'],
+                    'tab' => 'admin_font' . $language['id_lang'],
+                ),
+                'PS_FONT_ADMIN_NORMAL_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Normal woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_ADMIN_NORMAL_WOFF2_' . $language['id_lang'],
+                    'tab' => 'admin_font' . $language['id_lang'],
+                ),
+                'PS_FONT_ADMIN_BOLD_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Bold woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_ADMIN_BOLD_WOFF2_' . $language['id_lang'],
+                    'tab' => 'admin_font' . $language['id_lang'],
+                ),
+                'PS_FONT_ADMIN_LIGHT_WOFF2_' . $language['id_lang'] => array(
+                    'title' => $this->l('Light woff2 format'),
+                    'type' => 'file',
+                    'name' => 'PS_FONT_ADMIN_LIGHT_WOFF2_' . $language['id_lang'],
                     'tab' => 'admin_font' . $language['id_lang'],
                 ),
             );
@@ -181,24 +145,6 @@ class AdminFontManagerController extends ModuleAdminController
         }
         foreach ($this->languages as $language) {
             // Front
-            if (@$_FILES['PS_FONT_FRONT_NORMAL_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_NORMAL_EOT_' . $language['id_lang']], $language['iso_code'], 'front');
-            }
-            if (@$_FILES['PS_FONT_FRONT_BOLD_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_BOLD_EOT_' . $language['id_lang']], $language['iso_code'], 'front', 'bold');
-            }
-            if (@$_FILES['PS_FONT_FRONT_LIGHT_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_LIGHT_EOT_' . $language['id_lang']], $language['iso_code'], 'front', 'light');
-            }
-            if (@$_FILES['PS_FONT_FRONT_NORMAL_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_NORMAL_TTF_' . $language['id_lang']], $language['iso_code'], 'front');
-            }
-            if (@$_FILES['PS_FONT_FRONT_BOLD_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_BOLD_TTF_' . $language['id_lang']], $language['iso_code'], 'front', 'bold');
-            }
-            if (@$_FILES['PS_FONT_FRONT_LIGHT_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_FRONT_LIGHT_TTF_' . $language['id_lang']], $language['iso_code'], 'front', 'light');
-            }
             if (@$_FILES['PS_FONT_FRONT_NORMAL_WOFF_' . $language['id_lang']]['name']) {
                 $this->uploadFont($_FILES['PS_FONT_FRONT_NORMAL_WOFF_' . $language['id_lang']], $language['iso_code'], 'front');
             }
@@ -208,25 +154,16 @@ class AdminFontManagerController extends ModuleAdminController
             if (@$_FILES['PS_FONT_FRONT_LIGHT_WOFF_' . $language['id_lang']]['name']) {
                 $this->uploadFont($_FILES['PS_FONT_FRONT_LIGHT_WOFF_' . $language['id_lang']], $language['iso_code'], 'front', 'light');
             }
+            if (@$_FILES['PS_FONT_FRONT_NORMAL_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_FRONT_NORMAL_WOFF2_' . $language['id_lang']], $language['iso_code'], 'front');
+            }
+            if (@$_FILES['PS_FONT_FRONT_BOLD_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_FRONT_BOLD_WOFF2_' . $language['id_lang']], $language['iso_code'], 'front', 'bold');
+            }
+            if (@$_FILES['PS_FONT_FRONT_LIGHT_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_FRONT_LIGHT_WOFF2_' . $language['id_lang']], $language['iso_code'], 'front', 'light');
+            }
             // Back
-            if (@$_FILES['PS_FONT_ADMIN_NORMAL_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_NORMAL_EOT_' . $language['id_lang']], $language['iso_code'], 'admin');
-            }
-            if (@$_FILES['PS_FONT_ADMIN_BOLD_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_BOLD_EOT_' . $language['id_lang']], $language['iso_code'], 'admin', 'bold');
-            }
-            if (@$_FILES['PS_FONT_ADMIN_LIGHT_EOT_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_LIGHT_EOT_' . $language['id_lang']], $language['iso_code'], 'admin', 'light');
-            }
-            if (@$_FILES['PS_FONT_ADMIN_NORMAL_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_NORMAL_TTF_' . $language['id_lang']], $language['iso_code'], 'admin');
-            }
-            if (@$_FILES['PS_FONT_ADMIN_BOLD_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_BOLD_TTF_' . $language['id_lang']], $language['iso_code'], 'admin', 'bold');
-            }
-            if (@$_FILES['PS_FONT_ADMIN_LIGHT_TTF_' . $language['id_lang']]['name']) {
-                $this->uploadFont($_FILES['PS_FONT_ADMIN_LIGHT_TTF_' . $language['id_lang']], $language['iso_code'], 'admin', 'light');
-            }
             if (@$_FILES['PS_FONT_ADMIN_NORMAL_WOFF_' . $language['id_lang']]['name']) {
                 $this->uploadFont($_FILES['PS_FONT_ADMIN_NORMAL_WOFF_' . $language['id_lang']], $language['iso_code'], 'admin');
             }
@@ -235,6 +172,15 @@ class AdminFontManagerController extends ModuleAdminController
             }
             if (@$_FILES['PS_FONT_ADMIN_LIGHT_WOFF_' . $language['id_lang']]['name']) {
                 $this->uploadFont($_FILES['PS_FONT_ADMIN_LIGHT_WOFF_' . $language['id_lang']], $language['iso_code'], 'admin', 'light');
+            }
+            if (@$_FILES['PS_FONT_ADMIN_NORMAL_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_ADMIN_NORMAL_WOFF2_' . $language['id_lang']], $language['iso_code'], 'admin');
+            }
+            if (@$_FILES['PS_FONT_ADMIN_BOLD_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_ADMIN_BOLD_WOFF2_' . $language['id_lang']], $language['iso_code'], 'admin', 'bold');
+            }
+            if (@$_FILES['PS_FONT_ADMIN_LIGHT_WOFF2_' . $language['id_lang']]['name']) {
+                $this->uploadFont($_FILES['PS_FONT_ADMIN_LIGHT_WOFF2_' . $language['id_lang']], $language['iso_code'], 'admin', 'light');
             }
         }
         return parent::postProcess();
@@ -246,7 +192,7 @@ class AdminFontManagerController extends ModuleAdminController
             return $this->l('File is too large. please change your upload settings');
         }
         if (!ImageManager::isCorrectImageFileExt($file['name'], $types) || preg_match('/\%00/', $file['name'])) {
-            return $this->l('Font format not recognized, allowed formats are: .eot, .woff, .ttf');
+            return $this->l('Font format not recognized, allowed formats are: .woff, .woff2');
         }
         if ($file['error']) {
             return sprintf(Tools::displayError('Error while uploading font(s); please change your server\'s settings. (Error code: %s)'), $file['error']);
@@ -259,9 +205,8 @@ class AdminFontManagerController extends ModuleAdminController
             $file,
             Tools::getMaxUploadSize(),
             array(
-                'eot',
                 'woff',
-                'ttf',
+                'woff2',
             )
         )
         ) {
@@ -285,7 +230,7 @@ class AdminFontManagerController extends ModuleAdminController
         return parent::renderOptions();
     }
 
-    public function setMedia()
+    public function setMedia($isNewTheme = false)
     {
         parent::setMedia();
         $this->addJS(_PS_JS_DIR_ . 'admin/themes.js');
