@@ -19,8 +19,8 @@ class FontManager extends Module
     {
         $this->name = 'fontmanager';
         $this->tab = 'i18n_localization';
-        $this->version = '1.0.1';
-        $this->author = 'iPresta.ir';
+        $this->version = '1.0.2';
+        $this->author = 'iPresta';
         $this->need_instance = 0;
 
         $this->bootstrap = true;
@@ -77,13 +77,13 @@ class FontManager extends Module
         $pattern = _PS_MODULE_DIR_ . $this->name . '/views/css/front_pattern.css';
         $file = _PS_MODULE_DIR_ . $this->name . '/views/css/front.css';
         $cssContent = Tools::file_get_contents($pattern);
-        $newContent = str_replace('CURRENT_SHOP_URL', Tools::rtrimString($this->context->shop->getBaseURL(), '/'), $cssContent);
+        $newContent = str_replace('CURRENT_SHOP_URL', Tools::rtrimString($this->context->shop->getBaseURL(true, true), '/'), $cssContent);
         file_put_contents($file, $newContent);
         // Admin
         $pattern = _PS_MODULE_DIR_ . $this->name . '/views/css/admin_pattern.css';
         $file = _PS_MODULE_DIR_ . $this->name . '/views/css/admin.css';
         $cssContent = Tools::file_get_contents($pattern);
-        $newContent = str_replace('CURRENT_SHOP_URL', Tools::rtrimString($this->context->shop->getBaseURL(), '/'), $cssContent);
+        $newContent = str_replace('CURRENT_SHOP_URL', Tools::rtrimString($this->context->shop->getBaseURL(true, true), '/'), $cssContent);
         file_put_contents($file, $newContent);
     }
 
